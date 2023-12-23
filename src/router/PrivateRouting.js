@@ -1,12 +1,15 @@
-import React from "react";
+import React, { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
-import Dashboard from "../components/dashboard/Dashboard";
-import MyTask from "../components/myTask/MyTask";
-import HomeLayout from "../layout/HomeLayout";
-import Billing from "../components/billing/Billing";
-import Setting from "../components/settings/Setting";
-import MyTeams from "../components/myTeams/MyTeams";
-import Login from "../components/login/Login";
+import Login from "../components/login/Login"
+import HomeLayout from "../layout/HomeLayout"
+const Dashboard = lazy(() => import("../components/dashboard/Dashboard"))
+const MyTask = lazy(() => import("../components/myTask/MyTask"))
+const Billing = lazy(() => import("../components/billing/Billing"))
+const Setting = lazy(() => import("../components/settings/Setting"))
+const MyTeams = lazy(() => import("../components/myTeams/MyTeams"))
+
+
+
 
 export const PrivateRouting = createBrowserRouter([
   {
